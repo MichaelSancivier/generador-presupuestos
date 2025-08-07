@@ -6,7 +6,7 @@ from datetime import datetime
 from io import BytesIO
 
 # ====================================================================
-# Lógica de processamento y plantilla del presupuesto
+# Lógica de procesamiento y plantilla del presupuesto
 # ====================================================================
 
 # Definimos la plantilla HTML del presupuesto sin el logo
@@ -225,4 +225,4 @@ if submitted:
             mime="application/pdf"
         )
     except Exception as e:
-        st.error(f"Ocurrió un error al generar el presupuesto: {e}")
+        st.error(f"Ocurrió un error al generar el
