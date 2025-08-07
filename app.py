@@ -17,8 +17,12 @@ html_template = """
     <meta charset="UTF-8">
     <title>Orçamento MPFLORES</title>
     <style>
-        body { font-family: sans-serif !important; font-size: 14px; margin: 0; padding: 20px; }
-        .container { width: 100%; max-width: 800px; margin: auto; }
+        body { 
+    font-family: sans-serif !important; 
+    font-size: 14px; 
+    margin: 0; 
+    padding: 20px; 
+}
         .header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
         .header h1 { color: #004c99; font-size: 24px; }
         .details { display: flex; justify-content: space-between; margin-bottom: 20px; }
