@@ -204,4 +204,26 @@ if submitted:
         "impostos": impostos,
         "imposto_percentual": imposto_percentual,
         "comissao": comissao,
-        "comissao_percentual": comissao_percent
+        "comissao_percentual": comissao_percentual,
+        "total": total
+    }
+
+    # Llamar a la herramienta de generación de HTML (nuestra función de Python)
+    try:
+        html_content = generar_html_presupuesto(datos_agente)
+        st.success("Presupuesto generado con éxito.")
+        
+        # Previsualización
+        st.header("Previsualización del Presupuesto")
+        st.components.v1.html(html_content, height=800, scrolling=True)
+
+        # Generar el PDF para descarga
+        pdf_data = generar_pdf_de_html(html_content)
+        st.download_button(
+            label="📥 Descargar PDF",
+            data=pdf_data,
+            file_name=f"presupuesto-{cliente_nombre}-{numero_orcamento}.pdf",
+            mime="application/pdf"
+        )
+    except Exception as e:
+        st.error(f"Ocurrió un error al generar el presupuesto: {e}")
