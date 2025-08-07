@@ -5,7 +5,7 @@ from io import BytesIO
 from fpdf import FPDF
 
 # ====================================================================
-# Lógica de processamento y plantilla del presupuesto (com FPDF)
+# Lógica de procesamiento y plantilla del presupuesto (com FPDF)
 # ====================================================================
 
 def gerar_pdf_orcamento(data):
@@ -150,7 +150,7 @@ if submitted:
         
         st.download_button(
             label="📥 Descargar PDF",
-            data=pdf_bytes,
+            data=bytes(pdf_bytes),
             file_name=f"presupuesto-{cliente_nombre}-{numero_orcamento}.pdf",
             mime="application/pdf"
         )
