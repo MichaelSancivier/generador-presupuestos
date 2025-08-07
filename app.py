@@ -217,12 +217,4 @@ if submitted:
         st.components.v1.html(html_content, height=800, scrolling=True)
 
         # Generar el PDF para descarga
-        pdf_data = generar_pdf_de_html(html_content)
-        st.download_button(
-            label="📥 Descargar PDF",
-            data=pdf_data,
-            file_name=f"presupuesto-{cliente_nombre}-{numero_orcamento}.pdf",
-            mime="application/pdf"
-        )
-    except Exception as e:
-        st.error(f"Ocurrió un error al generar el
+        pdf_data = generar_pdf_de_
